@@ -7,14 +7,15 @@ hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
-      runas: root
+      
     - location: scripts/start_server.sh
       timeout: 300
-      runas: root
+      
   ApplicationStop:
     - location: scripts/stop_server.sh
       timeout: 300
-      runas: root  
+      runas: root
+      
   AfterInstall:
     - location: scripts/after_install.sh
       timeout: 300
